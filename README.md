@@ -54,6 +54,28 @@ Backend runs on `http://127.0.0.1:3001`.
 
 Vite is already configured to proxy `/api` requests to the backend.
 
+## Vercel deployment
+
+This project is now structured to work on Vercel:
+
+- Frontend is deployed from `dist`
+- Backend runs from the Vercel Serverless entry at [api/[...route].ts](/C:/Users/33731/Downloads/serene-flow/api/[...route].ts)
+- SPA routes are rewritten to `index.html` by [vercel.json](/C:/Users/33731/Downloads/serene-flow/vercel.json)
+
+Set these environment variables in Vercel:
+
+```env
+SUPABASE_URL=...
+SUPABASE_SERVICE_ROLE_KEY=...
+SESSION_SECRET=...
+```
+
+Recommended Vercel project settings:
+
+- Framework Preset: `Vite`
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
 ## Password reset flow
 
 The app now supports a database-backed password reset flow:
