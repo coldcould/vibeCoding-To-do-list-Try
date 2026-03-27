@@ -59,7 +59,7 @@ Vite is already configured to proxy `/api` requests to the backend.
 This project is now structured to work on Vercel:
 
 - Frontend is deployed from `dist`
-- Backend runs from the Vercel Serverless entry at [api/[...route].ts](/C:/Users/33731/Downloads/serene-flow/api/[...route].ts)
+- Backend runs from the Vercel Serverless entry at [api/index.ts](/C:/Users/33731/Downloads/serene-flow/api/index.ts)
 - SPA routes are rewritten to `index.html` by [vercel.json](/C:/Users/33731/Downloads/serene-flow/vercel.json)
 
 Set these environment variables in Vercel:
